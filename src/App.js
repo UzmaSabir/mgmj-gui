@@ -1,25 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect, useState } from 'react';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+function MembersList() {
+    const [members, setMembers] = useState([]);
+
+    useEffect(() => {
+        fetch('http://localhost:8080/members/getAllMembers')
+            .then(response => response.json())
+            .then(data => setMembers(data))
+            .catch(error => console.error('Error fetching users:', error));
+    }, []);
+
+    return (
+        <div>
+            <h2>Members</h2>
+            <ul>
+                {members.map(member => (
+                    <li key={member.id}>{member.name}</li>
+                ))}
+            </ul>
+        </div>
+    );
 }
 
-export default App;
+export default MembersList;
