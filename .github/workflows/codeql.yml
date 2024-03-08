@@ -20,7 +20,7 @@ on:
 jobs:
   analyze:
     name: Analyze
-    runs-on: ${{ 'ubuntu-latest' }}
+    runs-on: [ubuntu-latest]
     permissions:
       security-events: write
       
@@ -31,7 +31,7 @@ jobs:
     - name: Initialize CodeQL
       uses: github/codeql-action/init@v3
       with:
-        languages: ${{ javascript }}
+        languages: 'javascript'
 
     - name: Autobuild
       uses: github/codeql-action/autobuild@v3
@@ -39,4 +39,4 @@ jobs:
     - name: Perform CodeQL Analysis
       uses: github/codeql-action/analyze@v3
       with:
-        category: "/language:${{javascript-typescript}}"
+        category: "/language:javascript"
