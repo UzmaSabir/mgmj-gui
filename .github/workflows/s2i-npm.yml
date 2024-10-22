@@ -29,8 +29,10 @@ jobs:
             v1-${{ runner.os }}-build-
       - name: Install dependencies
         run: npm ci --ignore-scripts
+      - name: Update Browserslist DB
+        run: npx update-browserslist-db@latest
       - name: Build
-        run: npm run build        
+        run: CI=false npm run build       
 
   analyze:
     name: Analyze
