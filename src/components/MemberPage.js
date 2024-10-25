@@ -1,37 +1,9 @@
-import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Header from './components/Header';
-import Footer from './components/Footer';
-import HomePage from './components/MemberPage';
-import MemberPage from './components/MemberPage';
-import TaskPage from './components/TaskPage';
-//import AboutPage from './pages/AboutPage';
+// pages/MemberPage.js
+import React, { useState, useEffect } from 'react';
+import MemberList from './MemberList';
+import CreateMemberForm from './CreateMemberForm';
 
-function App() {
-    return (
-        <Router>
-            <Header />
-            <main style={{ padding: '20px', backgroundColor: '#f8f9fa', minHeight: '80vh' }}>
-                <Routes>
-                    <Route path="/memberPage" element={<MemberPage />} />
-                    <Route path="/taskPage" element={<TaskPage />} />
-
-                </Routes>
-            </main>
-            <Footer />
-        </Router>
-    );
-}
-
-export default App;
-
-
-
-/*import React, { useState, useEffect } from 'react';
-import MemberList from './components/MemberList';
-import CreateMemberForm from './components/CreateMemberForm';
-
-function App() {
+function MemberPage() {
     const [members, setMembers] = useState([]);
 
     useEffect(() => {
@@ -73,7 +45,6 @@ function App() {
                 },
                 body: JSON.stringify(updatedMember),
             });
-            // Update the member in the state
             setMembers(members.map(member =>
                 member.id === id ? { ...member, name: updatedMember.name } : member
             ));
@@ -105,4 +76,4 @@ function App() {
     );
 }
 
-export default App;*/
+export default MemberPage;
