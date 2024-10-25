@@ -26,6 +26,23 @@
 
 .App-link {
   color: #61dafb;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.App-link:hover {
+  color: #21a1f1; /* Darker shade on hover */
+}
+
+/* Style for navigation container in the header */
+.nav-container {
+  display: flex;
+  gap: 20px; /* Space out links */
+}
+
+.nav-link {
+  font-size: 1.2em; /* Make links a bit larger */
+  padding: 8px;
 }
 
 @keyframes App-logo-spin {
@@ -35,4 +52,19 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+/* Main content area */
+main {
+  padding: 20px;
+  background-color: #f0f0f0;
+  min-height: 80vh; /* Ensures main content is not hidden */
+}
+
+/* Footer styles */
+footer {
+  padding: 20px;
+  text-align: center;
+  background-color: #282c34;
+  color: white;
 }
