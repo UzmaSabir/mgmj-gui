@@ -2,9 +2,8 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Header from './components/Header';
 import Footer from './components/Footer';
-import HomePage from './components/MemberPage';
-import MemberPage from './components/MemberPage';
-import TaskPage from './components/TaskPage';
+import MemberPage from './pages/MemberPage';
+import TaskPage from './pages/TaskPage';
 //import AboutPage from './pages/AboutPage';
 
 function App() {
