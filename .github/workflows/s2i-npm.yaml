@@ -1,0 +1,12 @@
+name: Build
+
+on:
+  pull_request:
+    branches: ["main"]
+
+jobs:
+  build-source:
+    uses: UzmaSabir/actions/.github/workflows/npm-build.yaml@main
+
+    with:
+      node-version: "20"
