@@ -6,7 +6,7 @@ on:
 
 jobs:
   build-app:
-    uses: UzmaSabir/actions/.github/workflows/npm-docker-build.yaml@npm-docker-push
+    uses: UzmaSabir/actions/.github/workflows/npm-docker-push.yaml@npm-docker-push
     permissions:
       contents: read
       id-token: write
