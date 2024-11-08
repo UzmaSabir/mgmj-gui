@@ -9,6 +9,7 @@ function Header() {
                 <Link to="/" style={{ color: '#61dafb', textDecoration: 'none' }}>Home</Link>
                 <Link to="/memberPage" style={{ color: '#61dafb', textDecoration: 'none' }}>Member</Link>
                 <Link to="/taskPage" style={{ color: '#61dafb', textDecoration: 'none' }}>Task</Link>
+                <Link to="/assignTaskToMemberPage" style={{ color: '#61dafb', textDecoration: 'none' }}>AssignTaskToMember</Link>
                 <Link to="/about" style={{ color: '#61dafb', textDecoration: 'none' }}>About</Link>
             </nav>
         </header>

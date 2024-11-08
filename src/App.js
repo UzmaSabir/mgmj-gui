@@ -4,6 +4,7 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import MemberPage from './pages/MemberPage';
 import TaskPage from './pages/TaskPage';
+import AssignTaskToMemberPage from './pages/AssignTaskToMemberPage';
 //import AboutPage from './pages/AboutPage';
 
 function App() {
@@ -14,7 +15,7 @@ function App() {
                 <Routes>
                     <Route path="/memberPage" element={<MemberPage />} />
                     <Route path="/taskPage" element={<TaskPage />} />
-
+                    <Route path="/assignTaskToMemberPage" element={<AssignTaskToMemberPage />} />
                 </Routes>
             </main>
             <Footer />
