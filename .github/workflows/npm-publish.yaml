@@ -1,0 +1,16 @@
+name: Publish
+
+on:
+  push:
+    branches: ["main"]
+
+jobs:
+  build:
+    uses: UzmaSabir/actions/.github/workflows/npm-docker-push.yaml@main
+    permissions:
+      contents: read
+      id-token: write
+      packages: write
+      attestations: write
+    with:
+      node-version: "20"
