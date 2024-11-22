@@ -1,9 +1,11 @@
 // src/services/taskService.js
 
+//const API_PREFIX = '/tasks';
+
 // Fetch all tasks
 export const fetchTasks = async () => {
     try {
-        const response = await fetch('/getTasks');
+        const response = await fetch('/tasks/getTasks');
         return await response.json();
     } catch (error) {
         console.error('Error fetching tasks:', error);
@@ -14,7 +16,7 @@ export const fetchTasks = async () => {
 // Create a new task
 export const createTask = async (newTask) => {
     try {
-        const response = await fetch('/createTask', {
+        const response = await fetch('/tasks/createTask', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -31,7 +33,7 @@ export const createTask = async (newTask) => {
 // Update a task by ID
 export const updateTask = async (id, updatedTask) => {
     try {
-        await fetch(`/updateTask/${id}`, {
+        await fetch(`/tasks/updateTask/${id}`, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json',
@@ -48,7 +50,7 @@ export const updateTask = async (id, updatedTask) => {
 // Delete a task by ID
 export const deleteTask = async (id) => {
     try {
-        await fetch(`/deleteTask/${id}`, {
+        await fetch(`/tasks/deleteTask/${id}`, {
             method: 'DELETE',
         });
     } catch (error) {
